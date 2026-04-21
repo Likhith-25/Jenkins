@@ -4,13 +4,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                dir('Plant.java/src')
+                dir('Plant.java/src'){
                 echo "Moved"
                 echo 'compiling'
                 sh 'javac Flower.java'
                 echo 'executing'
                 sh 'java Flower.java'
                 }
+}
 }
 }
 }
